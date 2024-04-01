@@ -5,7 +5,8 @@ from PIL import Image, ImageDraw, ImageFont
 from textwrap import wrap
 import random
 import os
-from quotes import quotes  # Assuming quotes is a list of quotes
+from quotes import quotes_original  # Assuming quotes is a list of quotes
+from themes import themes
 
 app = Flask(__name__)
 
@@ -25,22 +26,26 @@ def generate_image():
         404: If no quotes are found for the given author
     """
 
-    global quotes  # Apparently necessary
+    quotes = quotes_original  # Apparently necessary
 
     inputted_author = request.args.get('author', default=None, type=str)
+    inputted_theme = request.args.get('theme', default=None, type=str)
 
     if inputted_author is not None:  # Filter quotes by author
-        filtered_quotes = [quote for quote in quotes if quote[1] == inputted_author]
+        filtered_quotes = [quote for quote in quotes if quote[1].lower() == inputted_author.lower()]
         if len(filtered_quotes) == 0:
             return "No quotes found for this given author", 404
         else:
             quotes = filtered_quotes
+    inputted_theme = inputted_theme.lower() if inputted_theme is not None else None
+
+    theme = themes.get(inputted_theme, themes["default"])
+    image_path = theme[0]
 
     quote, author = random.choice(quotes)
     author = f'- {author}'
 
     # Load background image
-    image_path = "assets/background.jpg"
     background_image = Image.open(image_path)
 
     # Create drawing context
@@ -91,9 +96,9 @@ def generate_image():
     quote_y = ((background_image.height - text_height) // 2) - move_up_by
 
     # Set text color
-    text_color = (255, 255, 255)  # White color
+    text_color = theme[1]
     draw.text((x_distance, 175), author, fill=text_color, font=author_font)  # Draw the author's name on the image
-    text_color = (171, 210, 0)  # Neon Green Color
+    text_color = theme[2]
 
     for line in wrapped_quote:
         # Calculate x position for this line
