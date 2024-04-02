@@ -3,6 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 from textwrap import wrap
 import random
 import os
+import time
 from quotes import quotes_original
 from themes import themes
 
@@ -15,8 +16,10 @@ def generate_image():
     Generates an image with a random quote and author
 
     Args:
-        author (str): an author used to filter the quotes
-        theme (str): a theme used to select the background image
+        author (str): an author used to filter the quotes theme
+        (str): a theme used to select the background image
+        daily_quote (bool): a boolean used to get a quote based on the current day, instead of randomly generated each
+        time
 
     Returns:
         image: a generated image with a quote and author
@@ -29,6 +32,13 @@ def generate_image():
 
     inputted_author = request.args.get('author', default=None, type=str)
     inputted_theme = request.args.get('theme', default=None, type=str)
+    daily_quote = request.args.get('daily_quote', default=None, type=bool)
+
+    if daily_quote is True:
+        current_day = int(time.time()) / 86400
+        quote, author = quotes[int(current_day) % len(quotes)]
+    else:
+        quote, author = random.choice(quotes)
 
     inputted_theme = inputted_theme.lower() if inputted_theme is not None else None  # case insensitive
 
@@ -42,7 +52,6 @@ def generate_image():
     theme = themes.get(inputted_theme, themes["default"])
     image_path = theme[0]
 
-    quote, author = random.choice(quotes)  # get the random quote and author from the quoate list
 
     # Load background image
     background_image = Image.open(image_path)
