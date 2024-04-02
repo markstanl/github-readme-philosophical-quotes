@@ -1,14 +1,17 @@
 # Philosophical-Quotes
 ![Python](https://img.shields.io/badge/python-v3.12.0-8A2BE2)
 
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,pycharm,git" />
+  </a>
+</p>
 
 
+## Overview
+The philosophical quotes generator is an API that allows you to add a philosphical quote image into your GitHub README, such as this one
 
-## Update (3/22/2024)
-Unfortunately, I have had to remove this script from my Ubuntu EC2 instance, as running the server was costing around $20/month. This was an unnecessary expense. The code still works, and we have some updated quotes. I am currently looking for a more cost-effective hosting solution.
-
-## Random API Philosophical Quotes  
-This repository contains the code for my random philosophical image quote API. To access an example, simply put `http://54.242.56.206:4000/generate_image` into your web browser. To use this in your own GitHub readme, use the following link for a generated image that takes in the current timestamp as a parameter, as well as any other parameters you want:
+(image from media folder)
 
 `http://54.242.56.206:4000/generate_image?timestamp=<current_timestamp>`
 
