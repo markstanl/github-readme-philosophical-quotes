@@ -34,20 +34,18 @@ def generate_image():
     inputted_theme = request.args.get('theme', default=None, type=str)
     daily_quote = request.args.get('daily_quote', default=None, type=bool)
 
-    if daily_quote is True:
-        current_day = int(time.time()) / 86400
-        quote, author = quotes[int(current_day) % len(quotes)]
-    else:
-        quote, author = random.choice(quotes)
-
-    inputted_theme = inputted_theme.lower() if inputted_theme is not None else None  # case insensitive
-
     if inputted_author is not None:  # Filter quotes by author
         filtered_quotes = [quote for quote in quotes if quote[1].lower() == inputted_author.lower()]
         if len(filtered_quotes) == 0:
             return "No quotes found for this given author", 404
         else:
             quotes = filtered_quotes
+
+    if daily_quote is True:
+        current_day = int(time.time()) / 86400
+        quote, author = quotes[int(current_day) % len(quotes)]
+    else:
+        quote, author = random.choice(quotes)
 
     theme = themes.get(inputted_theme, themes["default"])
     image_path = theme[0]
