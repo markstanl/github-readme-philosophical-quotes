@@ -10,6 +10,13 @@ This repository contains the code for my random philosophical image quote API. T
 
 ## Query Parameters
 
+| Parameter    | Description                                                                                                                                                 |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `author`     | This parameter allows you to filter the quotes by the name of the philosopher who said the quote. It is case-insensitive.                                   |
+| `theme`      | This parameter allows you to filter the quotes by the theme, i.e., the color scheme. It is case-insensitive.                                                |
+| `daily_quote`| If you would rather only have the quote generate daily, you can use this parameter. It will only generate a new quote once per day. It is case-insensitive. |
+| `timestamp`  | This parameter is used to generate a unique quote based on the current timestamp, only put <current_timestamp> as a value                                   |
+
 ### Author
 You can filter by the name of the philosopher who said the quote. The author parameter is case-insensitive. Here is a list of the authors you can filter by:
 

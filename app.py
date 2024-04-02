@@ -2,7 +2,6 @@ from flask import Flask, send_file, request
 from PIL import Image, ImageDraw, ImageFont
 from textwrap import wrap
 import random
-import os
 import time
 import io
 from data.quotes import quotes_original
@@ -20,7 +19,7 @@ def generate_image():
         author (str): an author used to filter the quotes theme
         (str): a theme used to select the background image
         daily_quote (bool): a boolean used to get a quote based on the current day, instead of randomly generated each
-        time
+                            time
 
     Returns:
         image: a generated image with a quote and author
