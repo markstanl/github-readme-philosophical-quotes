@@ -1,5 +1,6 @@
 # Philosophical-Quotes
-![Static Badge](https://img.shields.io/badge/python-v3.12.0-8A2BE2)
+<p align="center><img alt="Static Badge" src="https://img.shields.io/badge/python-v3.12.0-8A2BE2"></p>
+
 
 
 ## Update (3/22/2024)
