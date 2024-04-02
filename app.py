@@ -2,10 +2,10 @@ from flask import Flask, send_file, request
 from PIL import Image, ImageDraw, ImageFont
 from textwrap import wrap
 import random
-import time
 import io
 from data.quotes import quotes_original
 from data.themes import themes
+from methods import filter_by_author, filter_to_daily_quote, get_specific_quote, get_quote_by_index, check_error
 
 app = Flask(__name__)
 
@@ -33,23 +33,23 @@ def generate_image():
     inputted_author = request.args.get('author', default=None, type=str)
     inputted_theme = request.args.get('theme', default=None, type=str)
     daily_quote = request.args.get('daily_quote', default=None, type=bool)
+    specific_quote = request.args.get('quote', default=None, type=str)
+    specific_quote_index = request.args.get('quote_index', default=None, type=int)
 
-    if inputted_author is not None:  # Filter quotes by author
-        filtered_quotes = [quote for quote in quotes if quote[1].lower() == inputted_author.lower()]
-        if len(filtered_quotes) == 0:
-            return "No quotes found for this given author", 404
-        else:
-            quotes = filtered_quotes
+    error = check_error(author=inputted_author, theme=inputted_theme, daily=daily_quote, specific_quote=specific_quote,
+                        specific_quote_index=specific_quote_index, quotes=quotes)
+    if error:
+        return error
 
-    if daily_quote is True:
-        current_day = int(time.time()) / 86400
-        quote, author = quotes[int(current_day) % len(quotes)]
-    else:
-        quote, author = random.choice(quotes)
+    quotes = filter_by_author(quotes, inputted_author)
+    quotes = filter_to_daily_quote(quotes) if daily_quote else quotes
+    quotes = get_specific_quote(quotes, specific_quote) if specific_quote else quotes
+    quotes = get_quote_by_index(quotes, specific_quote_index) if specific_quote_index else quotes
+
+    quote, author = random.choice(quotes)
 
     theme = themes.get(inputted_theme, themes["default"])
     image_path = theme[0]
-
 
     # Load background image
     background_image = Image.open(image_path)
@@ -60,7 +60,6 @@ def generate_image():
     # Define font and size
     quote_font_path = "assets/Philosopher-Italic.ttf"
     author_font_path = "assets/Rambla-Italic.ttf"
-    quote_font_size = 0
 
     if len(quote) < 100:  # Adjust font size based on quote length
         quote_font_size = 30

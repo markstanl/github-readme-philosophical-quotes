@@ -30,7 +30,6 @@ quotes_original = [
     ["\"Cogito ergo sum.\"", "René Descartes"],
     ["\"Conquer yourself rather than the world.\"", "René Descartes"],
     ["\"I think, therefore I am.\"", "René Descartes"],
-    ["\"That which does not kill us makes us stronger.\"", "Friedrich Nietzsche"],
     ["\"In heaven, all the interesting people are missing.\"", "Friedrich Nietzsche"],
     ["\"That the sun will not rise tomorrow is no less intelligible a proposition, and implies no more contradiction, "
      "than the affirmation, that it will rise.\"", "David Hume"],
