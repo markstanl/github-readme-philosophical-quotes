@@ -1,4 +1,6 @@
 # Philosophical-Quotes
+![Static Badge](https://img.shields.io/badge/python-v3.12.0-8A2BE2)
+
 
 ## Update (3/22/2024)
 Unfortunately, I have had to remove this script from my Ubuntu EC2 instance, as running the server was costing around $20/month. This was an unnecessary expense. The code still works, and we have some updated quotes. I am currently looking for a more cost-effective hosting solution.
