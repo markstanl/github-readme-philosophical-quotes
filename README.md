@@ -31,6 +31,7 @@ You can filter by the name of the philosopher who said the quote. The author par
 
 ### Theme
 You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Here is a list of the themes you can filter by:
+These themes are based on gprm's GitHub readme stats themes. You can find the project [here](https://gprm.itsvg.in/).
 
 | Theme Names | Theme Names | Theme Names |
 |-------------|-------------|-------------|
@@ -72,7 +73,5 @@ This will not be successful, as it does not start with a quotation mark
 If you would like to generate a specific quote by index, you can use the quote_index parameter. Simply put in the index
 number of the quote in the quotes.py file. Because the list will likely change in the future, it is recommended to use the quote parameter instead
 
-
-These themes are based on gprm's GitHub readme stats themes. You can find the themes [here](https://gprm.itsvg.in/).
 
 ![Generated Image](http://147.182.254.93:5000/generate_image?theme=merko)
