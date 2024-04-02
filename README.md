@@ -43,6 +43,10 @@ You can filter by the theme of the quote, i.e., the color scheme. The theme para
 | blueberry | slateorange | kacho_ga |
 | city_light | swift | |
 
+### Daily Quote
+If you would rather only have the quote generate daily, you can use the daily_quote parameter. 
+This will only generate a new quote once per day. The daily_quote parameter is case-insensitive.
+
 These themes are based on gprm's GitHub readme stats themes. You can find the themes [here](https://gprm.itsvg.in/).
 
 ![Generated Image](http://54.242.56.206:4000/generate_image?timestamp=<current_timestamp>)

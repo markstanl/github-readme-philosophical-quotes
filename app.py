@@ -4,8 +4,9 @@ from textwrap import wrap
 import random
 import os
 import time
-from quotes import quotes_original
-from themes import themes
+import io
+from data.quotes import quotes_original
+from data.themes import themes
 
 app = Flask(__name__)
 
@@ -113,10 +114,12 @@ def generate_image():
         draw.text((x, quote_y), line, fill=text_color, font=quote_font)
         quote_y += draw.textbbox((0, 0), line, font=quote_font)[3] - draw.textbbox((0, 0), line, font=quote_font)[1]
 
-    # Save and return the modified image
-    output_image_path = os.path.join(os.getcwd(), "output_image.jpg")
-    background_image.save(output_image_path)
-    return send_file(output_image_path, mimetype='image/jpeg')
+    img_io = io.BytesIO()
+    background_image.save(img_io, 'JPEG', quality=70)
+    img_io.seek(0)
+
+    # Send the image data in the response
+    return send_file(img_io, mimetype='image/jpeg')
 
 
 if __name__ == "__main__":
