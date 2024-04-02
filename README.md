@@ -56,4 +56,4 @@ This will only generate a new quote once per day. The daily_quote parameter is c
 
 These themes are based on gprm's GitHub readme stats themes. You can find the themes [here](https://gprm.itsvg.in/).
 
-![Generated Image](http://54.242.56.206:4000/generate_image?timestamp=<current_timestamp>)
+![Generated Image]([http://147.182.254.93:5000/generate_image?theme=merko?timestamp=<current_timestamp>])
