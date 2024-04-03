@@ -5,7 +5,8 @@ import random
 import io
 from data.quotes import quotes_original
 from data.themes import themes
-from methods import filter_by_author, filter_to_daily_quote, get_specific_quote, get_quote_by_index, check_error
+from methods import (filter_by_author, filter_to_daily_quote, get_specific_quote, get_quote_by_index, check_error,
+                     filter_by_excluded_ids)
 
 app = Flask(__name__)
 
@@ -35,7 +36,7 @@ def generate_image():
     daily_quote = request.args.get('daily_quote', default=None, type=bool)
     specific_quote = request.args.get('quote', default=None, type=str)
     specific_quote_index = request.args.get('quote_index', default=None, type=int)
-    exclude_indexes = request.args.get('exclude_indexes', default=None, type=bool)
+    exclude_indexes = request.args.get('exclude_indexes', default=None, type=str)
 
     error = check_error(author=inputted_author, theme=inputted_theme, daily=daily_quote, specific_quote=specific_quote,
                         specific_quote_index=specific_quote_index, exclude_indexes=exclude_indexes, quotes=quotes)
@@ -43,6 +44,7 @@ def generate_image():
         return error
 
     quotes = filter_by_author(quotes, inputted_author)
+    quotes = filter_by_excluded_ids(quotes, exclude_indexes) if exclude_indexes else quotes
     quotes = filter_to_daily_quote(quotes) if daily_quote else quotes
     quotes = get_specific_quote(quotes, specific_quote) if specific_quote else quotes
     quotes = get_quote_by_index(quotes, specific_quote_index) if specific_quote_index else quotes

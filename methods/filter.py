@@ -22,6 +22,17 @@ def filter_to_daily_quote(quotes):
     current_day = int(time.time()) / 86400
     return [quotes[int(current_day) % len(quotes)]]
 
+def filter_by_excluded_ids(quotes, exclude_indexes):
+    """
+    Filters quotes by excluded indexes
+    :param quotes: The list of quotes to be filtered
+    :param exclude_indexes: The original string of numbers to be excluded
+    :return:
+        - quotes: The filtered list of quotes with a single quote inside
+    """
+    exclude_indexes = [int(index) for index in exclude_indexes.split(",") if index.strip()]
+    return [quote for quote in quotes if quote[2] not in exclude_indexes]
+
 
 def get_specific_quote(quotes, specific_quote):
     """
@@ -42,4 +53,4 @@ def get_quote_by_index(quotes, specific_quote_index):
     :return:
         - quotes: The filtered list of quotes with a single quote inside
     """
-    return [quotes[specific_quote_index]]
+    return [quote for quote in quotes if quote[2] == specific_quote_index]

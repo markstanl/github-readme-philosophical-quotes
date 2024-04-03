@@ -63,6 +63,16 @@ class FlaskTestCase(unittest.TestCase):
         response_6 = self.app.get('/generate_image?author=Peter Singer&daily_quote=true')
         self.assertEqual(200, response_6.status_code)
 
+    def test_generate_image_exclude_id_list(self):
+        response_1 = self.app.get('/generate_image?exclude_indexes=1,2')
+        self.assertEqual(200, response_1.status_code)
+        response_2 = self.app.get('/generate_image?exclude_indexes=1,2,3,4')
+        self.assertEqual(200, response_2.status_code)
+        response_3 = self.app.get('/generate_image?exclude_indexes=1 1,2,3')
+        self.assertEqual(400, response_3.status_code)
+        response_4 = self.app.get('/generate_image?exclude_indexes=1,9700')
+        self.assertEqual(400, response_4.status_code)
+
 
 if __name__ == '__main__':
     unittest.main()
