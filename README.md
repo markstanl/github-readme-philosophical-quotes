@@ -27,12 +27,12 @@ The philosophical quotes generator is an API that allows you to add a philosophi
   <img src="assets/media/Quote Image.jpg" alt="Icon"/>
 </p>
 
-`http://54.242.56.206:4000/generate_image?timestamp=<current_timestamp>`
-
 ## Usage
 The server that hosts this API is on DigitalOcean, and you can access it by using the following URL:
 
-(url)
+```markdown
+http://147.182.254.93:5000/generate_image?timestamp=<current_timestamp>
+```
 
 You can use the query parameters in the next section to customize the quote image that is generated
 
@@ -72,21 +72,25 @@ These themes are based on gprm's GitHub readme stats themes. You can find the pr
 
 | Theme Names | Theme Names | Theme Names |
 |-------------|-------------|-------------|
-| template | default | dark |
-| radical | merko | gruvbox |
-| tokyonight | synthwave | highcontrast |
-| dracula | prussian | monokai |
-| vue | vue-dark | shades-of-purple |
-| nightowl | buefy | blue-green |
-| algolia | great-gatsby | darcula |
-| bear | solarized-dark | solarized-light |
-| chartreuse-dark | nord | gotham |
-| material-palenight | graywhite | vision-friendly-dark |
-| ayu-light | midnight-purple | calm |
-| flag-india | omni | react |
-| jolly | maroongold | yeblu |
-| blueberry | slateorange | kacho_ga |
-| city_light | swift | |
+| default | dark | radical |
+| merko | gruvbox | tokyonight |
+| synthwave | highcontrast | dracula |
+| prussian | monokai | vue |
+| vue-dark | shades-of-purple | nightowl |
+| buefy | blue-green | algolia |
+| great-gatsby | darcula | bear |
+| solarized-dark | solarized-light | chartreuse-dark |
+| nord | gotham | material-palenight |
+| graywhite | vision-friendly-dark | ayu-light |
+| midnight-purple | calm | flag-india |
+| omni | react | jolly |
+| maroongold | yeblu | blueberry |
+| slateorange | kacho_ga | city_light |
+| swift | | |
+
+<p align="center">
+  <img src="assets/media/themes.png" alt="themes"/>
+</p>
 
 ### Daily Quote
 If you would rather only have the quote generate daily, you can use the daily_quote parameter. 
@@ -123,4 +127,4 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 ### Timestamp
 To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp.
 
-![Generated Image](http://147.182.254.93:5000/generate_image?theme=merko)
+![Generated Image](http://147.182.254.93:5000/generate_image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)

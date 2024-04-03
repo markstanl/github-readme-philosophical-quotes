@@ -50,6 +50,7 @@ def generate_image():
     quotes = get_quote_by_index(quotes, specific_quote_index) if specific_quote_index else quotes
 
     quote, author, quote_id = random.choice(quotes)
+    quote = "Quite the beautiful theme, wouldn't you say?"
 
     theme = themes.get(inputted_theme, themes["default"])
     image_path = theme[0]
@@ -79,7 +80,7 @@ def generate_image():
     quote_font = ImageFont.truetype(quote_font_path, size=quote_font_size)
 
     size = 30
-    author = f'- {author}'  # Add a dash before the author's name as it will be displayed on the imageq
+    author = f'- {inputted_theme}'  # Add a dash before the author's name as it will be displayed on the imageq
     if len(author) < 8:  # adjust the x distance based on the length of the author's name
         x_distance = 220
     elif len(author) < 12:

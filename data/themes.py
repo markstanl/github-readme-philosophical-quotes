@@ -1,5 +1,4 @@
 themes = {
-    "template": ["link to background", "author color", "quote color"],
     "default": ["assets/background assets/default.jpg", "#5296f0", "#151515"],
     "dark": ["assets/background assets/dark.jpg", "#dadada", "#9f9f9f"],
     "radical": ["assets/background assets/radical.jpg", "#a9fef7", "#fc428d"],
@@ -40,7 +39,7 @@ themes = {
     "yeblu": ["assets/background assets/yeblu.jpg", "#d6db0b", "#ffffff"],
     "blueberry": ["assets/background assets/blueberry.jpg", "#7395df", "#27e8a7"],
     "slateorange": ["assets/background assets/slateorange.jpg", "#db942a", "#ffffff"],
-    "kacho_ga": ["assets/background assets/kacho-ga.jpg", "#aa453a", "#aa453a"],
+    "kacho_ga": ["assets/background assets/kacho_ga.jpg", "#aa453a", "#aa453a"],
     "city_light": ["assets/background assets/city_light.jpg", "#4f94ef", "#434d58"],
     "swift": ["assets/background assets/swift.jpg", "#272727", "#000000"],
 }
