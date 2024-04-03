@@ -17,7 +17,7 @@ def generate_image():
 
     Args:
         author (str): an author used to filter the quotes theme
-        (str): a theme used to select the background image
+        theme (str): a theme used to select the background image
         daily_quote (bool): a boolean used to get a quote based on the current day, instead of randomly generated each
                             time
 
@@ -35,9 +35,10 @@ def generate_image():
     daily_quote = request.args.get('daily_quote', default=None, type=bool)
     specific_quote = request.args.get('quote', default=None, type=str)
     specific_quote_index = request.args.get('quote_index', default=None, type=int)
+    exclude_indexes = request.args.get('exclude_indexes', default=None, type=bool)
 
     error = check_error(author=inputted_author, theme=inputted_theme, daily=daily_quote, specific_quote=specific_quote,
-                        specific_quote_index=specific_quote_index, quotes=quotes)
+                        specific_quote_index=specific_quote_index, exclude_indexes=exclude_indexes, quotes=quotes)
     if error:
         return error
 
@@ -46,7 +47,7 @@ def generate_image():
     quotes = get_specific_quote(quotes, specific_quote) if specific_quote else quotes
     quotes = get_quote_by_index(quotes, specific_quote_index) if specific_quote_index else quotes
 
-    quote, author = random.choice(quotes)
+    quote, author, quote_id = random.choice(quotes)
 
     theme = themes.get(inputted_theme, themes["default"])
     image_path = theme[0]
