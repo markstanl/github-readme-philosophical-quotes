@@ -48,10 +48,10 @@ The only thing I request is to star this repository, and add the following comme
 |--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `author`     | This parameter allows you to filter the quotes by the name of the philosopher who said the quote. It is case-insensitive.                                                |
 | `theme`      | This parameter allows you to filter the quotes by the theme, i.e., the color scheme. It is case-insensitive.                                                             |
-| `daily_quote`| If you would rather only have the quote generate daily, you can use this parameter. It will only generate a new quote once per day. Any value makes this work            |
+| `daily_quote`| If you would rather only have the quote generated daily, you can use this parameter. It will only generate a new quote once per day. Any value makes this work            |
 | `quote`      | This parameter allows you to generate a specific quote. Simply put in the quote you would like to generate. It is case-insensitive and must start with a quotation mark. |
-| `quote_index`| This parameter allows you to generate a specific quote by index. Simply put in the index number of the quote in the quotes.py file.                                      |
-| `exclude_indexes`| This parameter allows you to restrict certain id values from the generation                                                                                              |
+| `quote_index`| This parameter allows you to generate a specific quote by index. Simply put the index number of the quote in the quotes.py file.                                      |
+| `exclude_indexes`| This parameter allows you to restrict certain ID values from the generation                                                                                              |
 | `timestamp`  | This parameter is used to generate a unique quote based on the current timestamp, only put <current_timestamp> as a value                                                |
 
 ### Author
@@ -93,12 +93,12 @@ These themes are based on gprm's GitHub readme stats themes. You can find the pr
 </p>
 
 ### Daily Quote
-If you would rather only have the quote generate daily, you can use the daily_quote parameter. 
-This will only generate a new quote once per day. The daily_quote parameter is case-insensitive.
+If you would rather only have the quote generated daily, you can use the daily_quote parameter. 
+This will only generate a new quote once per day. The daily_quote parameter is boolean, any value works for an input
 
 ### Specific Quote
 If you would like to generate a specific quote, you can use the quote parameter. Simply put in the quote
-you would like to generate. The quote parameter is case-insensitive, and will find a match if you type in the start of 
+you would like to generate. The quote parameter is case-insensitive and will find a match if you type in the start of 
 the quote, and it is unique, but _must_ start with a quotation mark.
 
 | Request                                            | Status             | Description                                                                                                                                                    |
@@ -108,7 +108,7 @@ the quote, and it is unique, but _must_ start with a quotation mark.
 | `/generate_image?quote="I think`                   | :warning:          | This will likely not be successful, as it is not unique enough. Though it may be successful, future updates may provide other quotes that start with "I think" |
 | `/generate_image?quote=I think, therefore I am.`   | :x:                | This will not be successful, as it does not start with a quotation mark                                                                                        |
 ### Specific Quote Index
-If you would like to generate a specific quote by index, you can use the quote_index parameter. Simply put in the index
+If you would like to generate a specific quote by index, you can use the quote_index parameter. Simply put the index
 number of the quote in the quotes.py file. Because the list will likely change in the future, it is recommended to use the quote parameter instead
 
 ### Exclude Indexes
