@@ -31,7 +31,7 @@ The philosophical quotes generator is an API that allows you to add a philosophi
 The server that hosts this API is on DigitalOcean, and you can access it by using the following URL:
 
 ```markdown
-http://147.182.254.93:5000/generate_image?timestamp=<current_timestamp>
+http://147.182.254.93:8000/generate_image?timestamp=<current_timestamp>
 ```
 
 You can use the query parameters in the next section to customize the quote image that is generated
@@ -127,4 +127,4 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 ### Timestamp
 To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp.
 
-![Generated Image](http://147.182.254.93:5000/generate_image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
+![Generated Image](http://147.182.254.93:8000/generate_image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
