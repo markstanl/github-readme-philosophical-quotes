@@ -23,6 +23,8 @@
 ## Overview
 The philosophical quotes generator is an API that allows you to add a philosophical quote image into your GitHub README, such as this one
 
+DOWN FOR MAINTINENCE
+
 <p align="center">
   <img src="assets/media/Quote Image.jpg" alt="Icon"/>
 </p>
