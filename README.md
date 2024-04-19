@@ -110,8 +110,8 @@ the quote, and it is unique, but _must_ start with a quotation mark.
 | `/generate_image?quote="I think`                   | :warning:          | This will likely not be successful, as it is not unique enough. Though it may be successful, future updates may provide other quotes that start with "I think" |
 | `/generate_image?quote=I think, therefore I am.`   | :x:                | This will not be successful, as it does not start with a quotation mark                                                                                        |
 ### Specific Quote Index
-If you would like to generate a specific quote by index, you can use the quote_index parameter. Simply put the index
-number of the quote in the quotes.py file. Because the list will likely change in the future, it is recommended to use the quote parameter instead
+If you would like to generate a specific quote by index, you can use the quote_index parameter. Simply put the id value of the quote as seen in the
+quotes.db sql database file. 
 
 ### Exclude Indexes
 If you would like to exclude certain indexes from the generation, you can use the exclude_indexes parameter. This will exclude the indexes you provide from the generation.
