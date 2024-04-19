@@ -5,3 +5,4 @@ threads = int(os.environ.get('GUNICORN_THREADS', '4'))
 bind = os.environ.get('GUNICORN_BIND', '0.0.0.0:8080')
 forwarded_allow_ips = '*'
 secure_scheme_headers = { 'X-Forwarded-Proto': 'https' }
+pythonpath = 'venv/bin/python'
