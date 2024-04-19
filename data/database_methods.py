@@ -10,12 +10,13 @@ c.execute('''
     (id INTEGER PRIMARY KEY AUTOINCREMENT,
      quote text, author text)
 ''')
+quotes_to_add = [
+    ["\"I think, therefore I am.\"", "René Descartes"],
 
-
-#
-# for quote in quotes_original:
-#     c.execute("INSERT INTO quotes (quote, author) VALUES (?, ?)", (quote[0], quote[1]))
-
+]
+c.execute('''
+    INSERT INTO quotes ()
+''')
 
 conn.commit()
 conn.close()
