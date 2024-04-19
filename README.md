@@ -121,12 +121,12 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 |-------------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/generate_image?exclude_indexes=1,2,3`         | :heavy_check_mark: | This will exclude the first three quotes from the generation                                                                                      |
 | `/generate_image?exclude_indexes=1`             | :heavy_check_mark: | This will exclude the first quote from the generation                                                                                             |
-| `/generate_image?exclude_indexes=1,18, 6`       | :heavy_check_mark: | This will exclude the first nine quotes from the generation                                                                                       |
-| `/generate_image?exclude_indexes=1, 18, 6`      | :warning:          | This will exclude the first nine quotes from the generation, but the spaces after the commas are not necessary and may cause issues in the future |
-| `/generate_image?exclude_indexes=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with 10000                                                |
+| `/generate_image?exclude_indexes=1,18, 6`       | :heavy_check_mark: | This will exclude the first, sixth, and eighth quotes from the generation                                                                         |
+| `/generate_image?exclude_indexes=1, 18, 6`      | :warning:          | This will exclude the first nine quotes from the generation, but the spaces after the commas are not necessary and may cause issues               |
+| `/generate_image?exclude_indexes=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
 
 
 ### Timestamp
-To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp.
+To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp, which changes every minute.
 
 ![Generated Image](http://147.182.254.93:8080/generate_image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
