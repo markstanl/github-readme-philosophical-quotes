@@ -22,8 +22,9 @@
 
 ## Overview
 The philosophical quotes generator is an API that allows you to add a philosophical quote image to your GitHub README. It is important to note that
-just because a quote is included in the generator, doesn't necessarily mean that I agree wholeheartedly with the position that the philosopher is taking.
-For many, the quote is simply well-written and is important in the history of philosophy.
+just because a quote is included in the generator, doesn't necessarily mean that I agree wholeheartedly with the position the philosopher is taking.
+In fact, many of the quotes here are contradictory and take positions against other quoted philosophers. The purpose of philosophy is to work together 
+to try and find the truth, those who disagree with you are not your enemy, but rather your ally.
 
 <p align="center">
   <img src="assets/media/Quote Image.jpg" alt="Icon"/>
