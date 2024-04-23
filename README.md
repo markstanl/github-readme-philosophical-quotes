@@ -64,12 +64,15 @@ You can filter by the name of the philosopher who said the quote. The author par
 
 | Authors             | Authors               | Authors             |
 |---------------------|-----------------------|---------------------|
-| Albert Camus        | Aristotle             | Bertrand Russell    |
-| Daniel Quinn        | David Hume            | Friedrich Nietzsche |
-| Immanuel Kant       | Jean-Jacques Rousseau | John Rawls          |
-| Ludwig Wittgenstein | Martin Heidegger      | Peter Singer        |
-| Plato               | René Descartes        | Richard Dawkins     |
-| Socrates            |                       |                     |
+| Albert Camus        | Alastair Norcross    | Aristotle           |
+| Bertrand Russell    | Daniel Quinn         | David Hume          |
+| Friedrich Nietzsche | Harry Frankfurt      | Immanuel Kant       |
+| Jean-Jacques Rousseau | Jean-Paul Sartre    | Jeremy Bentham      |
+| John Rawls          | Ludwig Wittgenstein  | Martin Heidegger    |
+| Martha Nussbaum     | Oliver Goldsmith     | Peter Singer        |
+| Plato               | René Descartes       | Richard Dawkins     |
+| Sam Harris          | Simone de Beauvoir   | Socrates            |
+
 
 ### Theme
 You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Here is a list of the themes you can filter by:
@@ -118,16 +121,16 @@ This will limit the ids you provide from the generation. exclude-ids will remove
 include-ids will restrict the generation to only include the quotes with the listed ids.
 To use this, find the id values of the quotes you wish to exclude, and put them in a comma-separated list.
 
-| Request                                         | Status             | Description                                                                                                                                       |
-|-------------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/generate_image?exclude-ids=1,2,3`             | :heavy_check_mark: | This will exclude the first three quotes from the generation                                                                                      |
-| `/generate_image?exclude-ids=1`             | :heavy_check_mark: | This will exclude the first quote from the generation                                                                                             |
-| `/generate_image?exclude-ids=1,18, 6`       | :heavy_check_mark: | This will exclude the first, sixth, and eighth quotes from the generation                                                                         |
-| `/generate_image?exclude-ids=1, 18, 6`      | :warning:          | This will exclude the first nine quotes from the generation, but the spaces after the commas are not necessary and may cause issues               |
-| `/generate_image?exclude-ids=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
+| Request                                     | Status             | Description                                                                                                                                       |
+|---------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/generate-image?exclude-ids=1,2,3`         | :heavy_check_mark: | This will exclude the first three quotes from the generation                                                                                      |
+| `/generate-image?exclude-ids=1`             | :heavy_check_mark: | This will exclude the first quote from the generation                                                                                             |
+| `/generate-image?exclude-ids=1,18, 6`       | :heavy_check_mark: | This will exclude the first, sixth, and eighth quotes from the generation                                                                         |
+| `/generate-image?exclude-ids=1, 18, 6`      | :warning:          | This will exclude the first nine quotes from the generation, but the spaces after the commas are not necessary and may cause issues               |
+| `/generate-image?exclude-ids=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
 
 
 ### Timestamp
 To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp, which changes every minute.
 
-![Generated Image](http://147.182.254.93:8080/generate-image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
+![Generated Image](http://147.182.254.93:8000/generate-image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)

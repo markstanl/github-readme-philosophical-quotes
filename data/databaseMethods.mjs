@@ -13,6 +13,17 @@ async function jsonDatabase() {
     console.log(rows);
 }
 
+async function printAuthors() {
+    const db = await open({
+        filename: './quotes.db',
+        driver: sqlite3.Database
+    });
+
+    const authors = await db.all('SELECT DISTINCT author FROM quotes');
+
+    console.log(authors);
+}
+
 async function addQuote(quote, author, id) {
     // Open the database
     const db = await open({
@@ -53,9 +64,10 @@ async function removeQuote(id) {
 //removeQuote(48).catch(console.error);
 
 async function main(){
-    await addQuote("\"Knowledge is no guarantee of good behavior, but ignorance is a virtual guarantee of bad behavior.\"",
-        "Martha Nussbaum")
-    await jsonDatabase()
+    //await addQuote("\"Knowledge is no guarantee of good behavior, but ignorance is a virtual guarantee of bad behavior.\"",
+      //  "Martha Nussbaum")
+    //await jsonDatabase()
+    printAuthors();
 }
 
-//main().catch(console.error);
+main().catch(console.error);
