@@ -25,11 +25,11 @@ app.get('/generate-image', async (req, res) => {
   let author = req.query['author'];
   let dailyQuote = req.query['daily-quote'];
   let quote = req.query['quote'];
-  let includeIndexes = req.query['include-indexes'];
-  let excludeIndexes = req.query['exclude-indexes'];
+  let includeIDs = req.query['include-ids'];
+  let excludeIDs = req.query['exclude-ids'];
 
   let preFilterQuotes = await allQuotes();
-  let returnedError = checkError(author, theme, dailyQuote, quote, includeIndexes, excludeIndexes, preFilterQuotes, res);
+  let returnedError = checkError(author, theme, dailyQuote, quote, includeIDs, excludeIDs, preFilterQuotes);
   if(returnedError !== null){
     return res.status(400).send(returnedError);
   }
@@ -41,7 +41,7 @@ app.get('/generate-image', async (req, res) => {
   if(themes[theme].border_color === undefined) borderColor = '000000';
   else borderColor = themes[theme].border_color;
 
-  let quotes = await filter(preFilterQuotes, author, dailyQuote, quote, includeIndexes, excludeIndexes);
+  let quotes = await filter(preFilterQuotes, author, dailyQuote, quote, includeIDs, excludeIDs);
   let randomQuote = await quotes[Math.floor(Math.random() * quotes.length)];
 
   let xOffset = 400-randomQuote.author.length*10+10;
@@ -94,6 +94,6 @@ app.get('/generate-image', async (req, res) => {
   res.send(svg);
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(8000, () => {
+  console.log(`Server is running on port 8000`);
 });

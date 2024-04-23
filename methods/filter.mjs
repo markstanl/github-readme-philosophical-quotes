@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 /**
  * Returns an initial unfiltered list of quote objects, each with an id, quote, and author, used for initial error
  * handling
- * @returns {Promise<any[]>} a list of quote objects
+ * @returns {Promise<Array<{id: number, quote: string, author: string}>>} a list of quote objects
  */
 export async function allQuotes() {
     const db = await open({
@@ -32,11 +32,11 @@ export async function allQuotes() {
  * @param searchQuote
  * @param include_indexes
  * @param exclude_indexes
- * @returns {Promise<*|[*]>}
+ * @returns {Promise<Array<{id: number, quote: string, author: string}>>}
  */
-export async function filter(quoteArray, author, daily_quote, searchQuote, include_indexes, exclude_indexes){
+export async function filter(quoteArray, author, dailyQuote, searchQuote, includeIDs, excludeIDs){
     let quotes = quoteArray;
-    if(daily_quote){
+    if(dailyQuote){
         return dailyQuote(quotes);
     }
     if(author){
@@ -45,12 +45,12 @@ export async function filter(quoteArray, author, daily_quote, searchQuote, inclu
     if(searchQuote){
         quotes = quotes.filter(quote => quote.quote.substring(0, searchQuote.length).toLowerCase() === searchQuote.toLowerCase());
     }
-    if(include_indexes){
-        let indexes = include_indexes.split(",").map(index => parseInt(index.trim()));
+    if(includeIDs){
+        let indexes = includeIDs.split(",").map(index => parseInt(index.trim()));
         quotes = quotes.filter(quote => indexes.includes(quote.id));
     }
-    if(exclude_indexes){
-        let indexes = exclude_indexes.split(",").map(index => parseInt(index.trim()));
+    if(excludeIDs){
+        let indexes = excludeIDs.split(",").map(index => parseInt(index.trim()));
         quotes = quotes.filter(quote => !indexes.includes(quote.id));
     }
     return quotes;
