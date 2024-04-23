@@ -133,4 +133,4 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 ### Timestamp
 To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp, which changes every minute.
 
-![Generated Image](http://147.182.254.93:8000/generate-image?theme=merko&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
+![Generated Image](http://147.182.254.93:8000/generate-image?theme=dark&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
