@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img alt="" src="https://skillicons.dev/icons?i=py,pycharm,git" />
+    <img alt="" src="https://skillicons.dev/icons?i=js,express,sqlite,ubuntu" />
   </a>
 </p>
 
@@ -36,7 +36,7 @@ This API is built using express, and inspired by the [GitHub Readme Stats](https
 The server that hosts this API is on DigitalOcean, and you can access it by using the following URL:
 
 ```markdown
-http://147.182.254.93:8080/generate-image?timestamp=<current_timestamp>
+http://147.182.254.93:8000/generate-image?timestamp=<current_timestamp>
 ```
 
 You can use the query parameters in the next section to customize the quote image that is generated
