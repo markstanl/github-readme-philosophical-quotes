@@ -53,7 +53,7 @@ The only thing I request is to star this repository, and add the following comme
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `author`      | This parameter allows you to filter the quotes by the name of the philosopher who said the quote. It is case-insensitive.                                                |
 | `theme`       | This parameter allows you to filter the quotes by the theme, i.e., the color scheme. It is case-insensitive.                                                             |
-| `daily_quote` | If you would rather only have the quote generated daily, you can use this parameter. It will only generate a new quote once per day. Any value makes this work           |
+| `daily-quote` | If you would rather only have the quote generated daily, you can use this parameter. It will only generate a new quote once per day. Any value makes this work           |
 | `quote`       | This parameter allows you to generate a specific quote. Simply put in the quote you would like to generate. It is case-insensitive and must start with a quotation mark. |
 | `include-ids` | This parameter allows you to restrict generation to only include certain ID values.                                                                                      |
 | `exclude-ids` | This parameter allows you to restrict certain ID values from the generation                                                                                              |
@@ -101,7 +101,7 @@ These themes are based on gprm's GitHub readme stats themes. You can find the pr
 </p>
 
 ### Daily Quote
-If you would rather only have the quote generated daily, you can use the daily_quote parameter.
+If you would rather only have the quote generated daily, you can use the daily-quote parameter.
 This will only generate a new quote once per day. The daily-quote parameter is boolean, any value works for an input
 
 ### Specific Quote
