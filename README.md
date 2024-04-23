@@ -76,7 +76,6 @@ You can filter by the name of the philosopher who said the quote. The author par
 
 ### Theme
 You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Here is a list of the themes you can filter by:
-These themes are based on gprm's GitHub readme stats themes. You can find the project [here](https://gprm.itsvg.in/).
 
 | Theme Names | Theme Names | Theme Names |
 |-------------|-------------|-------------|
