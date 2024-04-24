@@ -36,8 +36,6 @@ http://147.182.254.93:8000/generate-image?theme=dark
 |                      `holi` ![holi][holi]                      |                      `neon` ![neon][neon]                      |                 `blue_navy` ![blue_navy][blue_navy]                  |
 |              `calm_pink` ![calm_pink][calm_pink]               |                  [Add your theme][add-theme]                   |                                                                      |
 
-http://147.182.254.93:8000/generate-image?include-indexes=1&theme=default
-
 [default]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=default
 [transparent]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=transparent
 [shadow_red]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=shadow_red
@@ -113,5 +111,3 @@ http://147.182.254.93:8000/generate-image?include-indexes=1&theme=default
 [calm_pink]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=calm_pink
  
 [add-theme]: https://github.com/anuraghazra/github-readme-stats/edit/master/themes/index.js
-
-Want to add a new theme? Consider reading the [contribution guidelines](../CONTRIBUTING.md#themes-contribution) :D
