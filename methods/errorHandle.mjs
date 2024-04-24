@@ -71,7 +71,7 @@ export default function checkError(author, theme, daily, specificQuote, includeI
     }
 
     // Parameter Error Handling
-    if (theme && !Object.keys(themes).includes(theme.toLowerCase())) {
+    if (theme && !Object.keys(themes).map(key => key.toLowerCase()).includes(theme.toLowerCase())) {
         return "Invalid theme";
     }
     if (author) {

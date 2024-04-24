@@ -59,6 +59,11 @@ app.get('/generate-image', async (req, res) => {
     const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="400" height="250">
       <defs>
+          <linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0%" stop-color="#4158d0"/>
+            <stop offset="50%" stop-color="#c850c0"/>
+            <stop offset="100%" stop-color="#ffcc70"/>
+          </linearGradient>
         <style type="text/css">
           @font-face {
             font-family: 'Philosopher Italic';

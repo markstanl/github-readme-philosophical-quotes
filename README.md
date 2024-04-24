@@ -75,29 +75,9 @@ You can filter by the name of the philosopher who said the quote. The author par
 
 
 ### Theme
-You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Here is a list of the themes you can filter by:
+You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Refer here to see all the themes:
+[Themes](.themes/README.md)
 
-| Theme Names | Theme Names | Theme Names |
-|-------------|-------------|-------------|
-| default | dark | radical |
-| merko | gruvbox | tokyonight |
-| synthwave | highcontrast | dracula |
-| prussian | monokai | vue |
-| vue-dark | shades-of-purple | nightowl |
-| buefy | blue-green | algolia |
-| great-gatsby | darcula | bear |
-| solarized-dark | solarized-light | chartreuse-dark |
-| nord | gotham | material-palenight |
-| graywhite | vision-friendly-dark | ayu-light |
-| midnight-purple | calm | flag-india |
-| omni | react | jolly |
-| maroongold | yeblu | blueberry |
-| slateorange | kacho_ga | city_light |
-| swift | | |
-
-<p align="center">
-  <img src="assets/media/themes.png" alt="themes"/>
-</p>
 
 ### Daily Quote
 If you would rather only have the quote generated daily, you can use the daily-quote parameter.
