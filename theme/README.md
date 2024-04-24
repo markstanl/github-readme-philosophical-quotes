@@ -102,7 +102,7 @@ http://147.182.254.93:8000/generate-image?theme=dark
 [rose_pine]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=rose_pine
 [catppuccin_latte]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=catppuccin_latte
 [catppuccin_mocha]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=catppuccin_mocha
-[date_night]: http://147.182.254.93:8000/generate-image?include-indexes=1&theme=date_night
+[date_night]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=date_night
 [one_dark_pro]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=one_dark_pro
 [rose]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=rose
 [holi]: http://147.182.254.93:8000/generate-image?include-ids=1&theme=holi
