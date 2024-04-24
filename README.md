@@ -20,7 +20,7 @@
 </p>
 
 # :exclamation: **Important:** 
-## This code is NOT maintained anymore. This is simply to show the old code. Switch to the express branch for the maintained quotes
+## This code is NOT maintained anymore. This is simply to show the old code. Switch to the [express](https://github.com/markstanl/Philosophical-Quotes-API) branch for the maintained quotes
 
 ## Overview
 The philosophical quotes generator is an API that allows you to add a philosophical quote image to your GitHub README. It is important to note that
