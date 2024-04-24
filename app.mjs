@@ -75,8 +75,8 @@ app.get('/generate-image', async (req, res) => {
             }
         </style>
       </defs>
-      <rect width="${400}" height="${250}" style="fill:#${themes[theme].bg_color}" 
-                rx="4.5" ry="4.5" x="0.5" y="0.5" stroke="#${borderColor}" stroke-opacity="1" />
+      <rect width="${400 - 1}" height="${250 - 1}" style="fill:#${themes[theme].bg_color}"
+      rx="4.5" ry="4.5" x="${0.5 + 0.5}" y="${0.5 + 0.5}" stroke="#${borderColor}" stroke-opacity="1" />
       ${svgQuoteElements}
       <text x="${xOffset}" y="200" dominant-baseline="middle" text-anchor="middle" fill="#${themes[theme].text_color}"
       font-family="Rambla Italic" font-size="25">
