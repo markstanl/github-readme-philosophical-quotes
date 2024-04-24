@@ -76,7 +76,7 @@ You can filter by the name of the philosopher who said the quote. The author par
 
 ### Theme
 You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Refer here to see all the themes:
-[Themes](.themes/README.md)
+[Themes](.theme/README.md)
 
 
 ### Daily Quote
