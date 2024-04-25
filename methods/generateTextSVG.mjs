@@ -2,7 +2,6 @@
 
 const generateTextSVG = (quoteArray, quote, color) => {
     let yPlacement = 100-(quoteArray.length*26)*0.5;
-    if(quoteArray[1] === "gazelle") yPlacement+= 100;
 
     let svgQuoteElements = quoteArray.map((text, index) => {
         if (quote.length < 30) {
@@ -21,7 +20,7 @@ const generateTextSVG = (quoteArray, quote, color) => {
             return `<text x="200" y="${yPlacement + 10 + index * 20}" dominant-baseline="middle" text-anchor="middle" fill="#${color}"
     font-family="Philosopher Italic" font-size="20">${text}</text>`;
         } else {
-            return `<text x="200" y="${yPlacement + index * 15}" dominant-baseline="middle" text-anchor="middle" fill="#${color}"
+            return `<text x="200" y="${yPlacement + index * 15 + 60}" dominant-baseline="middle" text-anchor="middle" fill="#${color}"
     font-family="Philosopher Italic" font-size="15">${text}</text>`;
         }
     }).join('');
