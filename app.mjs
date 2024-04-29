@@ -95,7 +95,9 @@ app.get('/generate-image', async (req, res) => {
   // Set the content type to image/svg+xml
   res.setHeader('Content-Type', 'image/svg+xml');
 
-  // Send the SVG image in the response
+  // Set cache-control headers to no-cache to prevent GitHub from caching the SVG
+  res.setHeader('Cache-Control', 'no-cache, max-age=0');
+
   res.send(svg);
 });
 
