@@ -36,7 +36,7 @@ This API is built using express, and inspired by the [GitHub Readme Stats](https
 The server that hosts this API is on DigitalOcean, and you can access it by using the following URL:
 
 ```markdown
-http://147.182.254.93:8000/generate-image?timestamp=<current_timestamp>
+![](http://147.182.254.93:8000/generate-image)
 ```
 
 You can use the query parameters in the next section to customize the quote image that is generated
@@ -57,7 +57,6 @@ The only thing I request is to star this repository, and add the following comme
 | `quote`       | This parameter allows you to generate a specific quote. Simply put in the quote you would like to generate. It is case-insensitive and must start with a quotation mark. |
 | `include-ids` | This parameter allows you to restrict generation to only include certain ID values.                                                                                      |
 | `exclude-ids` | This parameter allows you to restrict certain ID values from the generation                                                                                              |
-| `timestamp`   | This parameter is used to generate a unique quote based on the current timestamp, only put <current_timestamp> as a value                                                |
 
 ### Author
 You can filter by the name of the philosopher who said the quote. The author parameter is case-insensitive. Here is a list of the authors you can filter by:
@@ -109,7 +108,4 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 | `/generate-image?exclude-ids=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
 
 
-### Timestamp
-To gain a unique quote for every README reload, you can use the timestamp parameter. This will generate a unique quote based on the current timestamp, which changes every minute.
-
-![Generated Image](http://147.182.254.93:8000/generate-image?theme=dark&timestamp=%3Ccurrent_timestamp%3E&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
+![Generated Image](http://147.182.254.93:8000/generate-image?theme=dark&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
