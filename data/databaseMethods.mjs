@@ -73,11 +73,11 @@ async function removeQuote(id) {
 //removeQuote(48).catch(console.error);
 
 async function main(){
-    //await removeQuote(50)
-    //await addQuote("\"\"A person is not morally responsible for what he has done if he did it only because he could not have done otherwise\"\"",
-    //  "Harry Frankfurt")
+    await removeQuote(48)
+    await addQuote("\"A person is not morally responsible for what he has done if he did it only because he could not have done otherwise\"",
+      "Harry Frankfurt")
     //await jsonDatabase()
-    await printDatabase();
+    //await printDatabase();
 }
 
 main().catch(console.error);
