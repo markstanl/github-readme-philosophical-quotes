@@ -38,7 +38,7 @@ app.get('/generate-image', async (req, res) => {
   if (theme === undefined) theme = 'default';
   if (themes[theme] === undefined) return res.status(400).send('Invalid theme');
   let borderColor;
-  if(themes[theme].border_color === undefined) borderColor = '000000';
+  if(themes[theme].border_color === undefined) borderColor = 'ffffff';
   else borderColor = themes[theme].border_color;
 
   let quotes = await filter(preFilterQuotes, author, dailyQuote, quote, includeIDs, excludeIDs);
