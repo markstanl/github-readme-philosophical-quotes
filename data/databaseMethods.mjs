@@ -1,7 +1,7 @@
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 
-async function jsonDatabase() {
+async function printDatabase() {
     const db = await open({
         filename: './quotes.db',
         driver: sqlite3.Database
@@ -31,9 +31,18 @@ async function addQuote(quote, author, id) {
         driver: sqlite3.Database
     });
 
+    let newId;
     if(id === undefined) {
-        const highestIdRow = await db.get('SELECT MAX(id) as maxId FROM quotes');
-        const newId = highestIdRow.maxId + 1;
+        const ids = await db.all('SELECT id FROM quotes ORDER BY id ASC');
+        for(let i = 0; i < ids.length - 1; i++) {
+            if(ids[i+1].id - ids[i].id > 1) {
+                newId = ids[i].id + 1;
+                break;
+            }
+        }
+        if(newId === undefined) {
+            newId = ids[ids.length - 1].id + 1;
+        }
     }
     else{
         const idExists = await db.get('SELECT id FROM quotes WHERE id = ?', id);
@@ -64,10 +73,11 @@ async function removeQuote(id) {
 //removeQuote(48).catch(console.error);
 
 async function main(){
-    //await addQuote("\"Knowledge is no guarantee of good behavior, but ignorance is a virtual guarantee of bad behavior.\"",
-      //  "Martha Nussbaum")
+    //await removeQuote(50)
+    //await addQuote("\"\"A person is not morally responsible for what he has done if he did it only because he could not have done otherwise\"\"",
+    //  "Harry Frankfurt")
     //await jsonDatabase()
-    printAuthors();
+    await printDatabase();
 }
 
 main().catch(console.error);
