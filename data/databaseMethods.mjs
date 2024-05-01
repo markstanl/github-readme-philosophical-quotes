@@ -24,6 +24,17 @@ async function printAuthors() {
     console.log(authors);
 }
 
+async function printQuotesByAuthor(author){
+    const db = await open({
+        filename: './quotes.db',
+        driver: sqlite3.Database
+    });
+
+    const quotes = await db.all('SELECT quote FROM quotes WHERE author = ?', author);
+
+    console.log(quotes);
+}
+
 async function addQuote(quote, author, id) {
     // Open the database
     const db = await open({
@@ -73,11 +84,12 @@ async function removeQuote(id) {
 //removeQuote(48).catch(console.error);
 
 async function main(){
-    await removeQuote(48)
-    await addQuote("\"A person is not morally responsible for what he has done if he did it only because he could not have done otherwise\"",
-      "Harry Frankfurt")
+    //await removeQuote(48)
+    await addQuote("\"If people never did silly things nothing intelligent would ever get done.\"",
+      "Ludwig Wittgenstein")
     //await jsonDatabase()
     //await printDatabase();
+    //await printQuotesByAuthor("Ludwig Wittgenstein")
 }
 
 main().catch(console.error);
