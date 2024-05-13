@@ -6,7 +6,6 @@
   <img src="assets/media/icon.svg" alt="Icon" width="100" height="100"/>
 </p>
 
-![Python](https://img.shields.io/badge/python-v3.12.0-8A2BE2)
 ![Pull Requests](https://img.shields.io/github/issues-pr/markstanl/Philosophical-Quotes-API)
 ![Issues](https://img.shields.io/github/issues/markstanl/Philosophical-Quotes-API)
 ![Last Commit](https://img.shields.io/github/last-commit/markstanl/Philosophical-Quotes-API)
