@@ -45,7 +45,7 @@ app.get('/generate-image', cors(), async (req, res) => {
   else borderColor = themes[theme].border_color;
 
   let quotes = await filter(preFilterQuotes, author, dailyQuote, quote, includeIDs, excludeIDs);
-  let randomQuote = await quotes[Math.floor(Math.random() * quotes.length)];
+  let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
   let xOffset = 400-randomQuote.author.length*10+10;
   if(randomQuote.author.length > 15){

@@ -3,7 +3,6 @@ import { open } from 'sqlite';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import {quoteToArray} from "./quoteArray.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -17,11 +16,7 @@ export async function allQuotes() {
         filename: path.join(__dirname, '../data/quotes.db'),
         driver: sqlite3.Database
     });
-
-    const objects = await db.all('SELECT * FROM quotes');
-    // filter the rows
-
-    return objects;
+    return await db.all('SELECT * FROM quotes');
 }
 
 /**
@@ -38,12 +33,12 @@ const dailyQuoteFilter = (quoteArray) => {
 
 /**
  *
- * @param quoteArray
- * @param author
- * @param daily_quote
- * @param searchQuote
- * @param include_indexes
- * @param exclude_indexes
+ * @param quoteArray the array of all quote objects
+ * @param author the name of the author to filter by
+ * @param dailyQuote boolean value to determine if the quote is a daily quote
+ * @param searchQuote the specific quote we want to search for
+ * @param includeIDs the indexes we want to include in generation
+ * @param excludeIDs the indexes we want to exclude from generation
  * @returns {Promise<Array<{id: number, quote: string, author: string}>>}
  */
 export async function filter(quoteArray, author, dailyQuote, searchQuote, includeIDs, excludeIDs){
@@ -67,5 +62,3 @@ export async function filter(quoteArray, author, dailyQuote, searchQuote, includ
     }
     return quotes;
 }
-
-//console.log(filter().then(console.log))
