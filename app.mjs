@@ -5,6 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import cors from 'cors';
 //methods
 import {allQuotes, filter} from './methods/filter.mjs';
 import {quoteToArray} from './methods/quoteArray.mjs';
@@ -20,7 +21,9 @@ const fontPathRambla = path.join(__dirname, './assets/Rambla-Italic.ttf');
 const fontDataRambla = fs.readFileSync(fontPathRambla);
 const base64Rambla = Buffer.from(fontDataRambla).toString('base64');
 
-app.get('/generate-image', async (req, res) => {
+app.use(cors());
+
+app.get('/generate-image', cors(), async (req, res) => {
   let theme = req.query['theme'];
   let author = req.query['author'];
   let dailyQuote = req.query['daily-quote'];

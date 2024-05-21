@@ -25,6 +25,18 @@ export async function allQuotes() {
 }
 
 /**
+ * Returns a single quote object from the list of quotes
+ * @param quoteArray
+ * @returns {[*]}
+ */
+const dailyQuoteFilter = (quoteArray) => {
+    let now = new Date();
+    let currentDay = new Date(now.getFullYear(), 0, 0) / 86400000;
+    return [quoteArray[Math.floor(Math.floor(currentDay) % quoteArray.length)]];
+}
+
+
+/**
  *
  * @param quoteArray
  * @param author
@@ -37,7 +49,7 @@ export async function allQuotes() {
 export async function filter(quoteArray, author, dailyQuote, searchQuote, includeIDs, excludeIDs){
     let quotes = quoteArray;
     if(dailyQuote){
-        return dailyQuote(quotes);
+        return dailyQuoteFilter(quotes);
     }
     if(author){
         quotes = quotes.filter(quote => quote.author.toLowerCase() === author.toLowerCase());
@@ -55,13 +67,5 @@ export async function filter(quoteArray, author, dailyQuote, searchQuote, includ
     }
     return quotes;
 }
-
-const dailyQuote = (quoteArray) => {
-    let now = new Date();
-    let currentDay = new Date(now.getFullYear(), 0, 0) / 86400000;
-    return [quoteArray[Math.floor(Math.floor(currentDay) % quoteArray.length)]];
-
-}
-
 
 //console.log(filter().then(console.log))
