@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/**/*.js": {
-      "runtime": "@vercel/node@3.1.5"
+      "runtime": "@vercel/node@3.1.5",
+      "includeFiles": "assets/**/*,data/**/*"
     }
   }
 }
