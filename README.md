@@ -25,17 +25,17 @@ just because a quote is included in the generator, doesn't necessarily mean that
 In fact, many of the quotes here are contradictory and take positions against other quoted philosophers. The purpose of philosophy is to work together
 to try and find the truth, those who disagree with you are not your enemy, but rather your ally. 
 
-This API is built using express, and inspired by the [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats) project by Anurag Hazra.
+This API is built using express, hosted on vercel, and inspired by the [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats) project by Anurag Hazra.
 
 <p align="center">
   <img src="assets/media/Quote Image.jpg" alt="Icon"/>
 </p>
 
 ## Usage
-The server that hosts this API is on DigitalOcean, and you can access it by using the following URL:
+This is an express function, hosted on vercel, and you can access it by using the following URL:
 
 ```markdown
-![](http://147.182.254.93:8000/generate-image)
+![](https://github-readme-philosophical-quotes.vercel.app/api/generate-image)
 ```
 
 You can use the query parameters in the next section to customize the quote image that is generated
