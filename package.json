@@ -2,6 +2,7 @@
   "name": "philosophicalquotesapi",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -15,5 +16,10 @@
     "pug": "2.0.0-beta11",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
+  },
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node@3.1.5"
+    }
   }
 }

@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app.mjs');
+var app = require('../api/generate-image.js');
 var debug = require('debug')('philosophicalquotesapi:server');
 var http = require('http');
 
