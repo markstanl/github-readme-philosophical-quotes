@@ -2,7 +2,7 @@
   "functions": {
     "api/**/*.js": {
       "runtime": "@vercel/node@3.1.5",
-      "includeFiles": "assets/**/*,data/**/*"
+      "includeFiles": "assets/**/*"
     }
   }
 }
