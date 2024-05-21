@@ -107,4 +107,4 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 | `/generate-image?exclude-ids=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
 
 
-![Generated Image](http://147.182.254.93:8000/generate-image?theme=dark&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
+![Generated Image](https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=dark&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
