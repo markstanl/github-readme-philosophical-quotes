@@ -96,14 +96,13 @@ the quote, and it is unique, but _must_ start with a quotation mark.
 If you would like to limit or exclude certain ids from the generation, you can use the exclude-ids or include-ids parameter. 
 This will limit the ids you provide from the generation. exclude-ids will remove the quotes with the listed ids from generations,
 include-ids will restrict the generation to only include the quotes with the listed ids.
-To use this, find the id values of the quotes you wish to exclude, and put them in a comma-separated list.
+To use this, find the id values of the quotes you wish to exclude, and put them in a comma-separated list. It is recommended to not add spaces between numbers
 
 | Request                                     | Status             | Description                                                                                                                                       |
 |---------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/generate-image?exclude-ids=1,2,3`         | :heavy_check_mark: | This will exclude the first three quotes from the generation                                                                                      |
 | `/generate-image?exclude-ids=1`             | :heavy_check_mark: | This will exclude the first quote from the generation                                                                                             |
-| `/generate-image?exclude-ids=1,18, 6`       | :heavy_check_mark: | This will exclude the first, sixth, and eighth quotes from the generation                                                                         |
-| `/generate-image?exclude-ids=1, 18, 6`      | :warning:          | This will exclude the first nine quotes from the generation, but the spaces after the commas are not necessary and may cause issues               |
+| `/generate-image?exclude-ids=1, 18, 6`      | :warning:          | This will exclude the first, sixth, and eighteenth quotes from the generation, but the spaces after the commas are not necessary and may cause issues               |
 | `/generate-image?exclude-ids=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
 
 
