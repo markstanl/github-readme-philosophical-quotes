@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img alt="" src="https://skillicons.dev/icons?i=js,express,sqlite,ubuntu" />
+    <img alt="" src="https://skillicons.dev/icons?i=js,express,sqlite,vercel" />
   </a>
 </p>
 
