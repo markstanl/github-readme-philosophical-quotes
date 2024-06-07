@@ -32,7 +32,8 @@ This API is built using express, hosted on vercel, and inspired by the [GitHub R
 </p>
 
 ## Usage
-This is an express function, hosted on vercel, and you can access it by using the following URL:
+It is highly encouraged for everyone to use this API in their ReadMes. The following is how you use it.
+This is an express function, hosted on Vercel, and you can access it by using the following URL:
 
 ```markdown
 ![](https://github-readme-philosophical-quotes.vercel.app/api/generate-image)
@@ -96,7 +97,7 @@ the quote, and it is unique, but _must_ start with a quotation mark.
 If you would like to limit or exclude certain ids from the generation, you can use the exclude-ids or include-ids parameter. 
 This will limit the ids you provide from the generation. exclude-ids will remove the quotes with the listed ids from generations,
 include-ids will restrict the generation to only include the quotes with the listed ids.
-To use this, find the id values of the quotes you wish to exclude, and put them in a comma-separated list. It is recommended to not add spaces between numbers
+To use this, find the id values of the quotes you wish to exclude, and put them in a comma-separated list. It is recommended not to add spaces between numbers
 
 | Request                                     | Status             | Description                                                                                                                                       |
 |---------------------------------------------|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
