@@ -61,17 +61,17 @@ The only thing I request is to star this repository, and add the following comme
 ### Author
 You can filter by the name of the philosopher who said the quote. The author parameter is case-insensitive. Here is a list of the authors you can filter by:
 
-| Authors             | Authors               | Authors             |
-|---------------------|-----------------------|---------------------|
-| Albert Camus        | Alastair Norcross    | Aristotle           |
-| Bertrand Russell    | Daniel Quinn         | David Hume          |
-| Friedrich Nietzsche | Harry Frankfurt      | Immanuel Kant       |
-| Jean-Jacques Rousseau | Jean-Paul Sartre    | Jeremy Bentham      |
-| John Rawls          | Ludwig Wittgenstein  | Martin Heidegger    |
-| Martha Nussbaum     | Oliver Goldsmith     | Peter Singer        |
-| Plato               | René Descartes       | Richard Dawkins     |
-| Sam Harris          | Simone de Beauvoir   | Socrates            |
-
+| Authors            | Authors               | Authors             |
+|--------------------|-----------------------|---------------------|
+| Albert Camus       | Alastair Norcross     | Albert Einstein     |
+| Aristotle          | Bertrand Russell      | Daniel Quinn        |
+| David Hume         | Friedrich Nietzsche   | Harry Frankfurt     |
+| Immanuel Kant      | Jean-Jacques Rousseau | Jean-Paul Sartre    |
+| Jeremy Bentham     | John Rawls            | Ludwig Wittgenstein |
+| Martin Heidegger   | Martha Nussbaum       | Oliver Goldsmith    |
+| Peter Gelderloos   | Peter Singer          | Plato               |
+| René Descartes     | Richard Dawkins       | Sam Harris          |
+| Simone de Beauvoir | Slavoj Žižek          | Socrates            |
 
 ### Theme
 You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Refer here to see all the themes:
