@@ -66,6 +66,7 @@ async function addQuote(quote, author, id) {
 
     // Insert the quote into the database
     await db.run('INSERT INTO quotes (quote, author, id) VALUES (?, ?, ?)', quote, author, newId);
+    console.log(`Added ${quote} by ${author} with id ${newId}`);
 }
 
 async function removeQuote(id) {
@@ -85,8 +86,8 @@ async function removeQuote(id) {
 
 async function main(){
     //await removeQuote(48)
-    await addQuote("\"If people never did silly things nothing intelligent would ever get done.\"",
-      "Ludwig Wittgenstein")
+    await addQuote("\"Only a people trained to accept being ruled by a violent power structure can really question someone’s right and need to forcefully defend herself against oppression.\"",
+      "Peter Gelderloos")
     //await jsonDatabase()
     //await printDatabase();
     //await printQuotesByAuthor("Ludwig Wittgenstein")
