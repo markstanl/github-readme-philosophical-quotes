@@ -86,8 +86,8 @@ async function removeQuote(id) {
 
 async function main(){
     //await removeQuote(48)
-    await addQuote("\"Only a people trained to accept being ruled by a violent power structure can really question someone’s right and need to forcefully defend herself against oppression.\"",
-      "Peter Gelderloos")
+    await addQuote("\"If people are good only because they fear punishment, and hope for reward, then we are a sorry lot indeed.\"",
+      "Albert Einstein")
     //await jsonDatabase()
     //await printDatabase();
     //await printQuotesByAuthor("Ludwig Wittgenstein")
