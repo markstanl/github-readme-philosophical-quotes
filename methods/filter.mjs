@@ -25,9 +25,11 @@ export async function allQuotes() {
  * @returns {[*]}
  */
 const dailyQuoteFilter = (quoteArray) => {
-    let now = new Date();
-    let currentDay = new Date(now.getFullYear(), 0, 0) / 86400000;
-    return [quoteArray[Math.floor(Math.floor(currentDay) % quoteArray.length)]];
+    const now = new Date();
+    const start = new Date('2005-01-20');
+    const differenceInTime = now.getTime() - start.getTime();
+    const differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24));
+    return [quoteArray[differenceInDays % quoteArray.length]];
 }
 
 
