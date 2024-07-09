@@ -2,7 +2,7 @@
   <img src="assets/media/Title Card.jpg" alt="Title Card">
 </p>
 
-<a href="https://github.com/markstanl/github-readme-philosophical-quotes align="center">
+<a href="https://github.com/markstanl/github-readme-philosophical-quotes" align="center">
     <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
 </a>
 
