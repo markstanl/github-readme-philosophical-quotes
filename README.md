@@ -2,9 +2,9 @@
   <img src="assets/media/Title Card.jpg" alt="Title Card">
 </p>
 
-<a href="https://github.com/markstanl/github-readme-philosophical-quotes" align="center">
+<p href="https://github.com/markstanl/github-readme-philosophical-quotes">
     <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
-</a>
+</p>
 
 ![Pull Requests](https://img.shields.io/github/issues-pr/markstanl/Philosophical-Quotes-API)
 ![Issues](https://img.shields.io/github/issues/markstanl/Philosophical-Quotes-API)
