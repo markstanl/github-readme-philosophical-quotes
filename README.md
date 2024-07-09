@@ -2,9 +2,10 @@
   <img src="assets/media/Title Card.jpg" alt="Title Card">
 </p>
 
-<p href="https://github.com/markstanl/github-readme-philosophical-quotes" align="center">
-    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy." alt="Philosophical Quote"> 
+<p align="center">
+  <img src="assets/media/icon.svg" alt="Icon" width="100" height="100"/>
 </p>
+
 
 ![Pull Requests](https://img.shields.io/github/issues-pr/markstanl/Philosophical-Quotes-API)
 ![Issues](https://img.shields.io/github/issues/markstanl/Philosophical-Quotes-API)
@@ -30,9 +31,9 @@ to try and find the truth, those who disagree with you are not your enemy, but r
 
 This API is built using express, hosted on vercel, and inspired by the [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats) project by Anurag Hazra.
 
-<p align="center">
-  <img src="assets/media/Quote Image.jpg" alt="Icon"/>
-</p>
+<a href="https://github.com/markstanl/github-readme-philosophical-quotes">
+    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
+</a>
 
 ## Usage
 It is highly encouraged for everyone to use this API in their ReadMes. The following is how you use it.
