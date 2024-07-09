@@ -31,9 +31,9 @@ to try and find the truth, those who disagree with you are not your enemy, but r
 
 This API is built using express, hosted on vercel, and inspired by the [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats) project by Anurag Hazra.
 
-<a href="https://github.com/markstanl/github-readme-philosophical-quotes">
-    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
-</a>
+<p href="https://github.com/markstanl/github-readme-philosophical-quotes" align="center">
+    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22" alt="Philosophical Quote"> 
+</p>
 
 ## Usage
 It is highly encouraged for everyone to use this API in their ReadMes. The following is how you use it.
