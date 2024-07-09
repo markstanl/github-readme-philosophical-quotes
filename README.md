@@ -18,7 +18,9 @@
   </a>
 </p>
 
-
+<p align="center" href="https://github.com/markstanl/github-readme-philosophical-quotes">
+  Demo Site
+</p>
 ## Overview
 The philosophical quotes generator is an API that allows you to add a philosophical quote image to your GitHub README. It is important to note that
 just because a quote is included in the generator, doesn't necessarily mean that I agree wholeheartedly with the position the philosopher is taking.
@@ -39,8 +41,7 @@ This is an express function, hosted on Vercel, and you can access it by using th
 ![](https://github-readme-philosophical-quotes.vercel.app/api/generate-image)
 ```
 
-You can use the query parameters in the next section to customize the quote image that is generated
-
+You can use the query parameters in the next section to customize the quote image that is generated. Check out the [demo site](https://philosophical-quotes-demo-site.vercel.app/) for help on getting your request parameters
 The only thing I request is to star this repository, and add the following comment to your README:
 
 ```markdown
