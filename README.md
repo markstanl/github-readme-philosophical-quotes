@@ -18,9 +18,10 @@
   </a>
 </p>
 
-<p align="center" href="https://github.com/markstanl/github-readme-philosophical-quotes">
-  Demo Site
+<p align="center">
+  <a href="https://github.com/markstanl/github-readme-philosophical-quotes">Demo Site</a>
 </p>
+
 ## Overview
 The philosophical quotes generator is an API that allows you to add a philosophical quote image to your GitHub README. It is important to note that
 just because a quote is included in the generator, doesn't necessarily mean that I agree wholeheartedly with the position the philosopher is taking.
