@@ -2,8 +2,8 @@
   <img src="assets/media/Title Card.jpg" alt="Title Card">
 </p>
 
-<p href="https://github.com/markstanl/github-readme-philosophical-quotes">
-    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
+<p href="https://github.com/markstanl/github-readme-philosophical-quotes" align="center">
+    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy." alt="Philosophical Quote"> 
 </p>
 
 ![Pull Requests](https://img.shields.io/github/issues-pr/markstanl/Philosophical-Quotes-API)
