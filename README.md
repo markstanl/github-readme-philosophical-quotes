@@ -1,10 +1,11 @@
 <p align="center">
   <img src="assets/media/Title Card.jpg" alt="Title Card">
 </p>
-
-<a href="https://github.com/markstanl/github-readme-philosophical-quotes" align="center">
-    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
-</a>
+<div style="text-align: center;">
+    <a href="https://github.com/markstanl/github-readme-philosophical-quotes">
+        <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote=One%20must%20imagine%20Sisyphus%20happy." alt="Philosophical Quote"> 
+    </a>
+</div>
 
 ![Pull Requests](https://img.shields.io/github/issues-pr/markstanl/Philosophical-Quotes-API)
 ![Issues](https://img.shields.io/github/issues/markstanl/Philosophical-Quotes-API)
