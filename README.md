@@ -2,9 +2,9 @@
   <img src="assets/media/Title Card.jpg" alt="Title Card">
 </p>
 
-<p align="center">
-  <img src="assets/media/icon.svg" alt="Icon" width="100" height="100"/>
-</p>
+<a href="https://github.com/markstanl/github-readme-philosophical-quotes">
+    <img src="https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=apprentice&quote="One must imagine Sisyphus happy."" alt="Philosophical Quote"> 
+</a>
 
 ![Pull Requests](https://img.shields.io/github/issues-pr/markstanl/Philosophical-Quotes-API)
 ![Issues](https://img.shields.io/github/issues/markstanl/Philosophical-Quotes-API)
@@ -109,4 +109,3 @@ To use this, find the id values of the quotes you wish to exclude, and put them 
 | `/generate-image?exclude-ids=1, 1 1, 10000` | :x:                | This will not be successful, the second value is not a number, and there is not a quote with id value 10000                                       |
 
 
-![Generated Image](https://github-readme-philosophical-quotes.vercel.app/api/generate-image?theme=dark&quote=%22One%20must%20imagine%20Sisyphus%20happy.%22)
