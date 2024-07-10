@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/markstanl/github-readme-philosophical-quotes">Demo Site</a>
+  <a href="https://philosophical-quotes-demo-site.vercel.app/">Demo Site</a>
 </p>
 
 ## Overview
