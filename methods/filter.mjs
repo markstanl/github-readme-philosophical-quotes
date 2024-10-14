@@ -3,6 +3,7 @@ import { open } from 'sqlite';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import shuffle from './shuffle.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -21,10 +22,14 @@ export async function allQuotes() {
 
 /**
  * Returns a single quote object from the list of quotes
- * @param quoteArray
+ * @param quoteArray array with quote objects
+ * @param seed  seed array
  * @returns {[*]}
  */
-const dailyQuoteFilter = (quoteArray) => {
+const dailyQuoteFilter = (quoteArray, seed) => {
+    if(seed !== undefined){
+        quoteArray = shuffle(quoteArray, seed);
+    }
     const now = new Date();
     const start = new Date('2005-01-20');
     const differenceInTime = now.getTime() - start.getTime();
@@ -43,10 +48,10 @@ const dailyQuoteFilter = (quoteArray) => {
  * @param excludeIDs the indexes we want to exclude from generation
  * @returns {Promise<Array<{id: number, quote: string, author: string}>>}
  */
-export async function filter(quoteArray, author, dailyQuote, searchQuote, includeIDs, excludeIDs){
+export async function filter(quoteArray, author, dailyQuote, searchQuote, includeIDs, excludeIDs, dailySeed){
     let quotes = quoteArray;
     if(dailyQuote){
-        return dailyQuoteFilter(quotes);
+        return dailyQuoteFilter(quotes, dailySeed);
     }
     if(author){
         quotes = quotes.filter(quote => quote.author.toLowerCase() === author.toLowerCase());
