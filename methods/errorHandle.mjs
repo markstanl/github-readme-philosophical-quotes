@@ -10,9 +10,10 @@ import themes from "../theme/index.mjs";
  * @param includeIndexes the indexes to include
  * @param excludeIndexes the indexes to exclude
  * @param quotes the list of quotes to search through
+ * @param dailySeed the daily seed
  * @returns {null|string} null if no errors, string if error
  */
-export default function checkError(author, theme, daily, specificQuote, includeIndexes, excludeIndexes, quotes) {
+export default function checkError(author, theme, daily, specificQuote, includeIndexes, excludeIndexes, quotes, dailySeed) {
     // Mutually Exclusive Parameters Error Handling
     if (specificQuote && includeIndexes) {
         return "Cannot use both quote and include-indexes";
@@ -21,6 +22,10 @@ export default function checkError(author, theme, daily, specificQuote, includeI
         return "Cannot use quote with author, daily-quote, or exclude-indexes";
     }
 
+    // Daily Seed
+    if (typeof dailySeed === "number" && dailySeed.isInteger) {
+        return "Invalid daily-seed. It should be an integer";
+    }
     // Specific Quote Error Handling
     if (specificQuote) {
         quotes = quotes.filter(quote => quote.quote.substring(0, specificQuote.length).toLowerCase() === specificQuote.toLowerCase());

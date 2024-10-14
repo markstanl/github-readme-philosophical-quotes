@@ -56,34 +56,41 @@ The only thing I request is to star this repository, and add the following comme
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `author`      | This parameter allows you to filter the quotes by the name of the philosopher who said the quote. It is case-insensitive.                                                |
 | `theme`       | This parameter allows you to filter the quotes by the theme, i.e., the color scheme. It is case-insensitive.                                                             |
-| `daily-quote` | If you would rather only have the quote generated daily, you can use this parameter. It will only generate a new quote once per day. Any value makes this work           |
+| `daily-quote` | If you would rather only have the quote generated daily, you can use this parameter. It will only generate a new quote once per day. Any value makes this work.          |
+| `daily-seed`  | If you don't like your friends to have the same quote as you, use a random seed.                                                                                         |
 | `quote`       | This parameter allows you to generate a specific quote. Simply put in the quote you would like to generate. It is case-insensitive and must start with a quotation mark. |
 | `include-ids` | This parameter allows you to restrict generation to only include certain ID values.                                                                                      |
-| `exclude-ids` | This parameter allows you to restrict certain ID values from the generation                                                                                              |
+| `exclude-ids` | This parameter allows you to restrict certain ID values from the generation.                                                                                             |
 
 ### Author
-You can filter by the name of the philosopher who said the quote. The author parameter is case-insensitive. Here is a list of the authors you can filter by:
+You can filter by the name of the one of our 39 philosophers who said the quote. The author parameter is case-insensitive. Here is a list of the authors you can filter by:
 
-| Authors            | Authors               | Authors             |
-|--------------------|-----------------------|---------------------|
-| Albert Camus       | Alastair Norcross     | Albert Einstein     |
-| Aristotle          | Bertrand Russell      | Daniel Quinn        |
-| David Hume         | Friedrich Nietzsche   | Harry Frankfurt     |
-| Immanuel Kant      | Jean-Jacques Rousseau | Jean-Paul Sartre    |
-| Jeremy Bentham     | John Rawls            | Ludwig Wittgenstein |
-| Martin Heidegger   | Martha Nussbaum       | Oliver Goldsmith    |
-| Peter Gelderloos   | Peter Singer          | Plato               |
-| René Descartes     | Richard Dawkins       | Sam Harris          |
-| Simone de Beauvoir | Slavoj Žižek          | Socrates            |
+| Authors               | Authors               | Authors               |
+|-----------------------|-----------------------|-----------------------|
+| Albert Camus          | Albert Einstein       | Alastair Norcross     |
+| Anaxagoras            | Anaximenes of Miletus | Aristotle             |
+| Bertrand Russell      | Daniel Quinn          | David Hume            |
+| Empedocles            | Friedrich Nietzsche   | Gorgias               |
+| Harry Frankfurt       | Heraclitus            | Immanuel Kant         |
+| Jean-Jacques Rousseau | Jean-Paul Sartre      | Jeremy Bentham        |
+| John Rawls            | Ludwig Wittgenstein   | Martin Heidegger      |
+| Martha Nussbaum       | Melissus of Samos     | Oliver Goldsmith      |
+| Parmenides of Elea    | Peter Gelderloos      | Peter Singer          |
+| Philolaus of Croton   | Plato                 | Protagoras            |
+| Pythagoras            | René Descartes        | Richard Dawkins       |
+| Sam Harris            | Simone de Beauvoir    | Slavoj Žižek          |
+| Socrates              | Thales of Miletus     | Voltaire              |
 
 ### Theme
 You can filter by the theme of the quote, i.e., the color scheme. The theme parameter is case-insensitive. Refer here to see all the themes:
 [Themes](theme/README.md)
 
 
-### Daily Quote
+### Daily Quote & Daily Seed
 If you would rather only have the quote generated daily, you can use the daily-quote parameter.
-This will only generate a new quote once per day. The daily-quote parameter is boolean, any value works for an input
+This will only generate a new quote once per day. The daily-quote parameter is boolean, any value works for an input. 
+The daily-seed parameter is used to add randomness to the daily quote (as the daily quote is based on the date). This 
+also shuffles the array, you can check the algorithm that does this in the [shuffle.mjs](methods/shuffle.mjs) file.
 
 ### Specific Quote
 If you would like to generate a specific quote, you can use the quote parameter. Simply put in the quote

@@ -28,12 +28,14 @@ export default async (req, res) => {
         let quote = req.query['quote'];
         let includeIDs = req.query['include-ids'];
         let excludeIDs = req.query['exclude-ids'];
+        let dailySeed = req.query['daily-seed'];
 
         let preFilterQuotes = await allQuotes();
-        let returnedError = checkError(author, theme, dailyQuote, quote, includeIDs, excludeIDs, preFilterQuotes);
+        let returnedError = checkError(author, theme, dailyQuote, quote, includeIDs, excludeIDs, preFilterQuotes, dailySeed);
         if (returnedError !== null) {
             return res.status(400).send(returnedError);
         }
+        if(dailySeed !== undefined) dailySeed = parseInt(dailySeed);
 
         // Theme handling
         if (theme === undefined) theme = 'default';
@@ -42,7 +44,7 @@ export default async (req, res) => {
         if (themes[theme].border_color === undefined) borderColor = 'ffffff';
         else borderColor = themes[theme].border_color;
 
-        let quotes = await filter(preFilterQuotes, author, dailyQuote, quote, includeIDs, excludeIDs);
+        let quotes = await filter(preFilterQuotes, author, dailyQuote, quote, includeIDs, excludeIDs, dailySeed);
         let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
         let xOffset = 400 - randomQuote.author.length * 10 + 10;

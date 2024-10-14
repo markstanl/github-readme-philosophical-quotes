@@ -21,7 +21,7 @@ async function printAuthors() {
 
     const authors = await db.all('SELECT DISTINCT author FROM quotes');
 
-    console.log(authors);
+    authors.map(author => console.log(author.author));
 }
 
 async function printQuotesByAuthor(author){
@@ -85,11 +85,13 @@ async function removeQuote(id) {
 //removeQuote(48).catch(console.error);
 
 async function main(){
-    //await removeQuote(48)
-    await addQuote("\"If people are good only because they fear punishment, and hope for reward, then we are a sorry lot indeed.\"",
-      "Albert Einstein")
+    // await removeQuote(80)
+    // const quote = "Rhetoric is the only area of expertise you need to learn. You can ignore all the rest and still get the better of the professionals!"
+    // await addQuote(`\"${quote}\"`,
+    //   "Gorgias",)
     //await jsonDatabase()
     //await printDatabase();
+    await printAuthors();
     //await printQuotesByAuthor("Ludwig Wittgenstein")
 }
 
